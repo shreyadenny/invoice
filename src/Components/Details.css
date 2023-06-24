@@ -2,21 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-::-webkit-scrollbar {
-  display:none;
+  height: auto;
 }
 body {
-  background-color: #201b1b;
-  overflow: hidden;
-   /* Replace with your desired background color */
+  background-color: #201b1b; 
 }
 .card {
+  overflow: visible;
   width: 300px;
   padding: 20px;
 }
-
+.label{
+  margin: 5px
+}
 .input {
   margin-bottom: 10px;
 }
