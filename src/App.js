@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { Card, Input, Button } from 'antd';
 import {Modal} from 'antd';
 import NewAccount from './Components/NewAccount';
@@ -19,9 +19,11 @@ import Clients from './Components/Clients';
 const { Meta } = Card;
 
 function LoginPage() {
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
   };
+
 
   return (
     <div className="container">
@@ -30,7 +32,7 @@ function LoginPage() {
         <form onSubmit={handleLogin}>
           <Input className="input" placeholder="Email" />
           <Input className="input" type="password" placeholder="Password" />
-          <Button className="button" type="primary" htmlType="submit">
+          <Button onClick={()=>navigate("/dashboard")} className="button" type="primary" htmlType="submit">
             Log In
           </Button>
           <Link to="/newAccount">Create Account</Link>
