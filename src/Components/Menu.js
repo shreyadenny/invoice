@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Card, Input, Button } from 'antd';
 import './Menu.css'
 import ClientForm from './newClient'
+import InvoiceForm from './newInvoice';
 
 function DropdownMenu() {
     return (
@@ -12,7 +13,9 @@ function DropdownMenu() {
           <li><a className="menu-item" href="/newClient">
         New Client
           </a></li>
-          <li>New Invoice</li>
+          <li><a className="menu-item" href="/newInvoice">
+        New Invoice
+          </a></li>
         </ul>
       </div>
     );

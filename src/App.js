@@ -16,6 +16,7 @@ import Taxes from './Components/Taxes';
 import Timetracking from './Components/Timetracking';
 import Clients from './Components/Clients';
 import ClientForm from './Components/newClient';
+import InvoiceForm from './Components/newInvoice';
 
 const { Meta } = Card;
 
@@ -61,6 +62,7 @@ function App() {
         <Route path="/Timetracking" element={<Timetracking/>}/>
         <Route path="/Clients" element={<Clients/>}/>
         <Route path="/newClient" element={<ClientForm/>}/>
+        <Route path="/newInvoice" element={<InvoiceForm/>}/>
         {/* Add additional routes and components for other pages */}
       </Routes>
     </Router>
